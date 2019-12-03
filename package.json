@@ -1,6 +1,6 @@
 {
-  "name": "react-health-app-clien",
-  "homepage": "https://dashakho.github.io/react-health-app-clien",
+  "name": "react-health-app-client",
+  "homepage": "https://dashakho.github.io/react-health-app-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
