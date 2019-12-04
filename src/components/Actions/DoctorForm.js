@@ -58,7 +58,7 @@ const DoctorForm = ({ doctor, handleChange, handleSubmit, cancelPath }) => (
       onChange={handleChange}
     />
 
-    <Button variant={'info'} type="submit">Submit</Button>
+    <Button variant={'success'} type="submit">Submit</Button>
     <Link to={cancelPath}>
       <Button variant={'danger'} type="button">Cancel</Button>
     </Link>

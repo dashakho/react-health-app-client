@@ -13,6 +13,15 @@ import Doctor from '../Actions/Doctor'
 import Doctors from '../Actions/Doctors'
 import DoctorUpdate from '../Actions/DoctorUpdate'
 
+// const sectionStyle = {
+//   width: '100%',
+//   height: '100%',
+//   backgroundImage: url('https://firearmrights.ca/wp-content/uploads/1457378853878.jpg'),
+//   backgroundSize: 'cover',
+//   backgroundPosition: 'center',
+//   backgroundAttachment: 'fixed'
+// }
+
 class App extends Component {
   constructor () {
     super()
@@ -59,7 +68,7 @@ class App extends Component {
             <ChangePassword alert={this.alert} user={user} />
           )} />
           <Route exact path='/' render={() => (
-            <Doctors alert={this.alert} />
+            <Doctors alert={this.alert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-doctor' render={() => (
             <DoctorCreate alert={this.alert} user={user}/>
