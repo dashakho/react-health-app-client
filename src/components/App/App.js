@@ -12,6 +12,7 @@ import DoctorCreate from '../Actions/DoctorCreate'
 import Doctor from '../Actions/Doctor'
 import Doctors from '../Actions/Doctors'
 import DoctorUpdate from '../Actions/DoctorUpdate'
+import SearchForm from '../Actions/SearchForm'
 
 // const sectionStyle = {
 //   width: '100%',
@@ -79,6 +80,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/doctors/:id/edit' render={() => (
             <DoctorUpdate alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/your-doctors' render={() => (
+            <SearchForm alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>

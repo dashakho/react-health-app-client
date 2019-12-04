@@ -52,7 +52,7 @@ const DoctorForm = ({ doctor, handleChange, handleSubmit, cancelPath }) => (
       placeholder="State"
       value={doctor.state}
       name="state"
-      minLength={3}
+      minLength={2}
       required
       onChange={handleChange}
     />
@@ -63,7 +63,7 @@ const DoctorForm = ({ doctor, handleChange, handleSubmit, cancelPath }) => (
       placeholder="Postal Code"
       value={doctor.postal_code}
       name="postal_code"
-      minLength={3}
+      minLength={5}
       required
       onChange={handleChange}
     />
