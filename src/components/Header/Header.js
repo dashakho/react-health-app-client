@@ -29,7 +29,7 @@ const Header = ({ user }) => (
   // <nav class="navbar navbar-dark bg-dark">
   // <Navbar bg="primary" variant="dark" expand="md">
   <Navbar bg="dark" variant="dark" expand="md">
-    <Navbar.Brand href="#">
+    <Navbar.Brand href="#doctors">
       MyDoctors
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
