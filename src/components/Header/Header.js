@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 const authenticatedOptions = (
   <Fragment>
     <Nav.Link to="/">Home</Nav.Link>
-    <Nav.Link href="#your-doctors">Search Doctors</Nav.Link>
+    <Nav.Link href="#your-doctors">Search Doctor</Nav.Link>
     <Nav.Link href="#create-doctor">Create Doctor</Nav.Link>
     <Nav.Link href="/#doctors">My Doctors</Nav.Link>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
@@ -29,9 +29,7 @@ const Header = ({ user }) => (
   // <nav class="navbar navbar-dark bg-dark">
   // <Navbar bg="primary" variant="dark" expand="md">
   <Navbar bg="dark" variant="dark" expand="md">
-    <Navbar.Brand href="#doctors">
-      MyDoctors
-    </Navbar.Brand>
+    <Nav.Link href="#doctors">MyDoctors</Nav.Link>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
