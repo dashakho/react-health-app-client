@@ -10,15 +10,18 @@ const DoctorForm = ({ doctor, handleChange, handleSubmit, cancelPath }) => (
       placeholder="Find a Doctor by Specialty"
       value={doctor.taxonomy_description}
       name="taxonomy_description"
+      minLength={3}
+      required
       onChange={handleChange}
     />
-
     <label htmlFor="first_name">First Name</label>
     <input
       id="first_name"
       placeholder="First Name"
       value={doctor.first_name}
       name="first_name"
+      minLength={3}
+      required
       onChange={handleChange}
     />
 
@@ -28,6 +31,7 @@ const DoctorForm = ({ doctor, handleChange, handleSubmit, cancelPath }) => (
       placeholder="Last Name"
       value={doctor.last_name}
       name="last_name"
+      minLength={3}
       onChange={handleChange}
     />
 
@@ -37,6 +41,8 @@ const DoctorForm = ({ doctor, handleChange, handleSubmit, cancelPath }) => (
       placeholder="City"
       value={doctor.city}
       name="city"
+      minLength={3}
+      required
       onChange={handleChange}
     />
 
@@ -46,6 +52,8 @@ const DoctorForm = ({ doctor, handleChange, handleSubmit, cancelPath }) => (
       placeholder="State"
       value={doctor.state}
       name="state"
+      minLength={3}
+      required
       onChange={handleChange}
     />
 
@@ -55,14 +63,14 @@ const DoctorForm = ({ doctor, handleChange, handleSubmit, cancelPath }) => (
       placeholder="Postal Code"
       value={doctor.postal_code}
       name="postal_code"
+      minLength={3}
+      required
       onChange={handleChange}
     />
-
     <Button variant={'success'} type="submit">Submit</Button>
     <Link to={cancelPath}>
       <Button variant={'danger'} type="button">Cancel</Button>
     </Link>
   </form>
 )
-
 export default DoctorForm

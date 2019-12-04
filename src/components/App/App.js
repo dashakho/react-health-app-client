@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
@@ -55,6 +55,7 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          {!user ? <Redirect to="/sign-in" /> : null}
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />
@@ -67,14 +68,11 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
-          <Route exact path='/' render={() => (
-            <Doctors alert={this.alert} user={user} />
-          )} />
           <AuthenticatedRoute user={user} path='/create-doctor' render={() => (
             <DoctorCreate alert={this.alert} user={user}/>
           )} />
           <Route exact path='/doctors/:id' render={() => (
-            <Doctor alert={this.alert} user={user} />
+            user ? <Doctor alert={this.alert} user={user} /> : null
           )} />
           <AuthenticatedRoute user={user} exact path='/doctors' render={() => (
             <Doctors alert={this.alert} user={user} />

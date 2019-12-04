@@ -8,15 +8,22 @@ const Doctor = props => {
   const [doctor, setDoctor] = useState(null)
   const userId = props.user ? props.user._id : null
 
-  useEffect(() => {
-    axios(`${apiUrl}/doctors/${props.match.params.id}`)
+  useEffect(() => { // Did mount
+    console.log('hey')
+    axios({
+      url: `${apiUrl}/doctors/${props.match.params.id}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${props.user.token}`
+      }
+    })
       .then(res => setDoctor(res.data.doctor))
       .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested doctor', variant: 'danger' }))
   }, [])
 
   const handleDelete = event => {
     axios({
-      url: `{apiUrl}/doctors/${event.target.id}`,
+      url: `${apiUrl}/doctors/${props.match.params.id}`,
       method: 'DELETE',
       headers: {
         'Authorization': `Token token=${props.user.token}`
@@ -32,6 +39,10 @@ const Doctor = props => {
       })
   }
 
+  const handleUpdate = (event) => {
+    history.push(`/doctors/${event.target.name}/edit`)
+  }
+
   if (!doctor) {
     return <p>Loading stuff...</p>
   }
@@ -44,7 +55,8 @@ const Doctor = props => {
       <h2>{doctor.city}</h2>
       <h2>{doctor.state}</h2>
       <h2>{doctor.postal_code}</h2>
-      {userId === doctor.owner._id && <button onClick={handleDelete} className="btn btn-danger">Delete</button>}
+      {userId === doctor.user_id && <Button variant={'danger'} id={doctor.id} onClick={handleDelete}>Delete</Button>}
+      {userId === doctor.user_id && <Button variant={'warning'} onClick={handleUpdate} name={doctor.id}>Edit</Button>}
       <Fragment>
         <Button href={`#doctors/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
         <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>

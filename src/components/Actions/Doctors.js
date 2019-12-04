@@ -26,7 +26,7 @@ const Doctors = props => {
 
   const doctorsJsx = doctors.map(doctor => (
     <ListGroup.Item key={doctor._id} as={'a'} href={`#/doctors/${doctor._id}`}>
-      {doctor.last_name}
+      {doctor.last_name} {doctor.first_name}
     </ListGroup.Item>
   ))
 

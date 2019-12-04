@@ -12,7 +12,13 @@ const DoctorUpdate = props => {
   const { alert } = props
 
   useEffect(() => {
-    axios(`${apiUrl}/doctors/${props.match.params.id}`)
+    axios({
+      url: `${apiUrl}/doctors/${props.match.params.id}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${props.user.token}`
+      }
+    })
       .then(res => setDoctor(res.data.doctor))
       .catch(console.error)
   }, [])
