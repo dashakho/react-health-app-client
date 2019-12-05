@@ -15,10 +15,10 @@ const SearchDoctor = (props) => {
   }
 
   return (
-    <div>
+    <div className="container">
       <iframe width="560" height="315" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" ref={(c) => { this.map = c }}></iframe>
       <br />
-      <input id="search" onKeyUp={handleOnKeyUp} />
+      <input id="search" placeholder="Ex. Hospitals Near Me" onKeyUp={handleOnKeyUp} />
     </div>
   )
 }

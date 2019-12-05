@@ -8,7 +8,7 @@ import messages from '../AutoDismissAlert/messages'
 const DoctorCreate = props => {
   const [doctor, setDoctor] = useState({ taxonomy_description: '', first_name: '', last_name: '', city: '', state: '', postal_code: '' })
   const { alert } = props
-  console.log('props', props)
+  // console.log('props', props)
 
   const handleChange = event => {
     event.persist()

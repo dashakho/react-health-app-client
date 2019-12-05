@@ -9,7 +9,7 @@ const Doctor = props => {
   const userId = props.user ? props.user._id : null
 
   useEffect(() => { // Did mount
-    console.log('hey')
+    // console.log('hey')
     axios({
       url: `${apiUrl}/doctors/${props.match.params.id}`,
       method: 'GET',

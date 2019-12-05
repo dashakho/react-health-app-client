@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 const authenticatedOptions = (
   <Fragment>
     <Nav.Link href="#your-doctors">Find Hospitals on Google Maps</Nav.Link>
-    <Nav.Link href="#api-doctors">Search Form</Nav.Link>
+    <Nav.Link href="#api-doctors">Find Your Doctor</Nav.Link>
     <Nav.Link href="#create-doctor">Create Doctor</Nav.Link>
     <Nav.Link href="#doctors">My Doctors</Nav.Link>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
