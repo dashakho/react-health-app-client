@@ -42,7 +42,7 @@ const DoctorUpdate = props => {
       .then(response => {
         setEditedDoctor(true)
         alert({
-          heading: 'Ypur Doctor Successfully Edited ',
+          heading: 'Your Doctor Successfully Edited ',
           message: messages.updateDoctorSuccess,
           variant: 'success' })
       })
