@@ -7,7 +7,7 @@ const authenticatedOptions = (
     <Nav.Link to="/">Home</Nav.Link>
     <Nav.Link href="#your-doctors">Search Doctor</Nav.Link>
     <Nav.Link href="#create-doctor">Create Doctor</Nav.Link>
-    <Nav.Link href="/#doctors">My Doctors</Nav.Link>
+    <Nav.Link href="#doctors">My Doctors</Nav.Link>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
   </Fragment>

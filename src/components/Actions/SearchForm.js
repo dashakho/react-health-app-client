@@ -19,10 +19,11 @@ const SearchForm = (props) => {
   const handleSubmit = event => {
     event.preventDefault()
     axios({
-      url: `https://npiregistry.cms.hhs.gov/api/?taxonomy_description=${info.taxonomy_description}&first_name=${info.first_name}&last_name=${info.last_name}&city=${info.city}&state=${info.state}&postal_code=${info.postal_code}&version=2.1`,
+      url: `https://npiregistry.cms.hhs.gov/api/?version=2.1&taxonomy_description=${info.taxonomy_description}&first_name=${info.first_name}&last_name=${info.last_name}&city=${info.city}&state=${info.state}&postal_code=${info.postal_code}`,
       method: 'GET',
       headers: {
-        'Origin': 'https://dashakho.github.io/react-health-app-client/'
+        // 'Origin': 'https://dashakho.github.io/react-health-app-client/'
+        'Access-Control-Allow-Origin': true
       }
     })
       .then(res => setInfo(res.data.data))
