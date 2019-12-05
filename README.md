@@ -55,4 +55,4 @@ I am planning to further work on styling my components.
 * As an authenticated user, I would like to be able to use search from a third-party API.
 * As an authenticated user, I would like to be able to use search via Google Maps.
 
-![Screen Shot 2019-12-05 at 1.15.34 PM](https://www.dropbox.com/s/3ysozky0epvz4tq/Screen%20Shot%202019-12-05%20at%201.15.34%20PM.png)
+![image](https://media.git.generalassemb.ly/user/22462/files/037d0880-1780-11ea-9860-9fc905322cee)
