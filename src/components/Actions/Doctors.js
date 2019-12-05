@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import ListGroup from 'react-bootstrap/ListGroup'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
@@ -30,21 +30,10 @@ const Doctors = props => {
     </ListGroup.Item>
   ))
 
-  //   return (
-  //     <div>
-  //       <h1>My Selected Doctors</h1>
-  //       <Link to="/create-doctor">Add a Doctor</Link>
-  //       <ListGroup>
-  //         {doctorsJsx}
-  //       </ListGroup>
-  //     </div>
-  //   )
-  // }
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <div className="d-flex justify-content-between align-items-center">
-          {props.user && <Link to="/create-doctor">Add a doctor</Link>}
         </div>
         <ListGroup>
           {doctorsJsx}
@@ -53,5 +42,6 @@ const Doctors = props => {
     </div>
   )
 }
+// was on line 37 {props.user && <Link to="/create-doctor">Add a doctor</Link>}
 
 export default Doctors
