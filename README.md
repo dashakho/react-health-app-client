@@ -7,11 +7,11 @@
 
 ## Application Description
 FindDoctor is a single-page application which allows users to search for doctors. Once signed up and authenticated, users can:
-1. Create their own collection of doctors, update and delite them;
-2. Search for doctors from a third-party API belonging to [NPPES NPI Registry] (https://npiregistry.cms.hhs.gov/);
-3. Search for hospitals via Google Maps;
+1. Create their own collection of doctors, update and delite them
+2. Search for doctors from a third-party API belonging to [NPPES NPI Registry](https://npiregistry.cms.hhs.gov/)
+3. Search for hospitals via Google Maps
 
-The backend was built using Express.js and MongoDB. The front-end was built using React.js and Axios for http requests (the requests communicate with the back end and third-party API). -->
+The backend was built using Express.js and MongoDB. The front-end was built using React.js and Axios for http requests (the requests communicate with the back end and third-party API).
 
 ## Technologies Used
 - React
