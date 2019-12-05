@@ -19,23 +19,32 @@ const SearchForm = (props) => {
   const handleSubmit = event => {
     event.preventDefault()
     axios({
-      url: `https://npiregistry.cms.hhs.gov/api/?version=2.1&taxonomy_description=${info.taxonomy_description}&first_name=${info.first_name}&last_name=${info.last_name}&city=${info.city}&state=${info.state}&postal_code=${info.postal_code}`,
+      url: `https://cors-anywhere.herokuapp.com/https://npiregistry.cms.hhs.gov/api/?taxonomy_description=${info.taxonomy_description}&first_name=${info.first_name}&last_name=${info.last_name}&city=${info.city}&state=${info.state}&postal_code=${info.postal_code}&version=2.0`,
       method: 'GET',
       headers: {
-        // 'Origin': 'https://dashakho.github.io/react-health-app-client/'
         'Access-Control-Allow-Origin': true
       }
     })
-      .then(res => setInfo(res.data.data))
+      .then(res => {
+      // setState
+        // console.log('searchform res', res)
+        // console.log('searchform res.data', res.data)
+        // console.log('searchform res.data.results', res.data.results)
+        // console.log('searchform res.data.result_count', res.data.result_count)
+        // setInfo(res.data.data)
+      })
       .catch(console.error)
   }
+
+  // if (info.taxonomy_description !== '') {
+  // } else {
   return (
     <form onSubmit={handleSubmit}>
       <li><label htmlFor="taxonomy_description">Taxonomy Description</label></li>
       <input
         id="taxonomy_description"
         placeholder="Find a Doctor by Specialty"
-        value={info.taxonomy_description}
+        value={''}
         name="taxonomy_description"
         minLength={3}
         onChange={handleChange}
@@ -45,7 +54,7 @@ const SearchForm = (props) => {
       <input
         id="first_name"
         placeholder="First Name"
-        value={info.first_name}
+        value={''}
         name="first_name"
         minLength={3}
         onChange={handleChange}
@@ -55,7 +64,7 @@ const SearchForm = (props) => {
       <input
         id="last_name"
         placeholder="Last Name"
-        value={info.last_name}
+        value={''}
         name="last_name"
         minLength={3}
         onChange={handleChange}
@@ -64,7 +73,7 @@ const SearchForm = (props) => {
       <input
         id="city"
         placeholder="City"
-        value={info.city}
+        value={''}
         name="city"
         minLength={3}
         onChange={handleChange}
@@ -74,7 +83,7 @@ const SearchForm = (props) => {
       <input
         id="state"
         placeholder="State"
-        value={info.state}
+        value={''}
         name="state"
         minLength={2}
         onChange={handleChange}
@@ -84,13 +93,17 @@ const SearchForm = (props) => {
       <input
         id="postal_code"
         placeholder="Postal Code"
-        value={info.postal_code}
+        value={''}
         name="postal_code"
         minLength={5}
         onChange={handleChange}
       />
+      <br/>
+      <br/>
+
       <Button variant={'success'} type="submit">Search</Button>
-    </form>)
+    </form>
+  )
 }
 
 export default SearchForm
