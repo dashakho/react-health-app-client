@@ -42,10 +42,10 @@ The backend was built using Express.js and MongoDB. The front-end was built usin
 ## Unsolved Problems / Future Iterations
 I am planning to further work on styling my components.
 
-#### Wireframes
+## Wireframes
 - [Link to Wireframes](https://bit.ly/36cH2gh)
 
-#### User Stories
+## User Stories
 * As an unregistered user, I would like to sign up with my email and password.
 * As a registered user, I would like to sign in with my email and password.
 * As an authenticated user, I would like to be able to change password.

@@ -82,18 +82,20 @@ const SearchForm = (props) => {
     const docHTML = results.map(result => (
       <div key={result.number}>
         <Form>
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>First Name</Form.Label>
-            <Form.Text className="text-muted TaxInfo">
-              {result.basic.first_name}
-            </Form.Text>
-          </Form.Group>
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Text className="text-muted TaxInfo">
-              {result.basic.last_name}
-            </Form.Text>
-          </Form.Group>
+          <Row>
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>First Name an</Form.Label>
+              <Form.Text className="text-muted TaxInfo">
+                {result.basic.first_name}
+              </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>d Last Name</Form.Label>
+              <Form.Text className="text-muted TaxInfo">
+                {result.basic.last_name}
+              </Form.Text>
+            </Form.Group>
+          </Row>
         </Form>
       </div>
     ))
@@ -245,7 +247,7 @@ const SearchForm = (props) => {
             </form>
           </Col>
           <Col sm={6}>
-            <h1>Something went wrong ...</h1>
+            <h1>Nothing found, please try again...</h1>
           </Col>
         </Row>
       </Container>
